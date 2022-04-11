@@ -1,5 +1,14 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    globals:
+        app_name: '%env(APP_NAME)%'
+        menu:
+            0:
+                name: "Users"
+                route: app_user_index
+            1:
+                name: "User form"
+                route: app_user_new
 
 when@test:
     twig:
