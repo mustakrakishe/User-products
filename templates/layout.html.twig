@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{%
+	set page = menu|filter(
+		item => item.route is same as (
+			app.request.attributes.get('_route')
+		)
+	)|first
+%}
+
+{% block title %}
+	{{ page.name }}
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center mb-5">
+		{{ page.name }}
+	</h1>
+	{% block content %}{% endblock %}
+{% endblock %}
