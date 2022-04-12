@@ -10,6 +10,9 @@ twig:
             1:
                 name: "User form"
                 route: app_user_new
+            2:
+                name: "Product form"
+                route: app_product_new
 
 when@test:
     twig:
