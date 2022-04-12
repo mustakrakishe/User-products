@@ -1,3 +1,9 @@
+home:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
+    defaults:
+        route: 'app_user_index'
+
 controllers:
     resource: ../src/Controller/
     type: annotation
