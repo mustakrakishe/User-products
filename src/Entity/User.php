@@ -20,7 +20,9 @@ class User
     #[ORM\Column(type: 'string', length: 255)]
     private $lastName;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'integer', options:[
+        'unsigned' => true
+    ])]
     private $age;
 
     public function getId(): ?int
