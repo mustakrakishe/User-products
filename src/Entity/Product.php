@@ -17,7 +17,7 @@ class Product
     private $name;
 
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'products')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: false, onDelete: 'cascade')]
     private $user;
 
     public function getId(): ?int
